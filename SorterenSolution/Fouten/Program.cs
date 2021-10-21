@@ -7,8 +7,7 @@ namespace Fouten
         static void Main(string[] args)
         {
             int x = 2;
-          
-
+         
             try
             {  
                 int y = int.Parse(Console.ReadLine());
