@@ -4,12 +4,13 @@ using System;
 
 namespace LampenFabriek
 {
+    // Blauwdruk van eenn object (een custom type)
     class Lamp
     {
         // Eigenschappen leg je vast in fields
         private int lumen = 200;
-       // private ConsoleColor kleur = ConsoleColor.Yellow;
-        private bool isAan = false;
+        //private ConsoleColor kleur = ConsoleColor.Yellow;
+        protected bool isAan = false;
 
         public bool IsAan
         {
@@ -18,6 +19,7 @@ namespace LampenFabriek
                 return isAan;
             }
         }
+
         public ConsoleColor Kleur { get; set; } = ConsoleColor.Yellow;
 
         // Properties. Bedoeld om gecontroleerde toegang tot fields te faciliteren.
@@ -38,7 +40,7 @@ namespace LampenFabriek
 
 
         // Gedrag. leg je vast in procedures of functions (methods)
-        public void Aan()
+        public virtual void Aan()
         {
             Console.BackgroundColor = Kleur;
             isAan = true;
