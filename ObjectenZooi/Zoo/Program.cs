@@ -25,6 +25,12 @@ namespace Zoo
             Wildebeest beast = new Wildebeest();
             Antilope ant = new Antilope();
 
+            Krokodil crok = new Krokodil();
+            Terrarium ter = new Terrarium();
+            ter.VoegToe(crok);
+            ter.VoegToe(beast);
+            zoo.Assemble(ter);
+
             Aquarium bakwater = new Aquarium();
             bakwater.VoegToe(sid);
             bakwater.VoegToe(vis);
